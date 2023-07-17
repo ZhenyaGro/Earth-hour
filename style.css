@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+html {
+  counter-reset: count;
+}
+
+body {
+  font-family: sans-serif;
+}
+
 .game {
   background-image: url(./img/earth-map.jpg);
   background-position: center;
@@ -12,12 +20,25 @@
   min-height: 100vh;
   position: relative;
 }
-.game__lamp-checkbox {
+.game__count {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white;
+}
+.game__count::before {
+  content: counter(count);
+}
+
+.bulb__checkbox {
   position: absolute;
   left: -99999px;
-  display: none;
+  visibility: hidden;
 }
-.game__label svg {
+.bulb__checkbox:checked {
+  counter-increment: count;
+}
+.bulb__label svg {
   height: 50px;
   fill: #ffe01a;
 }/*# sourceMappingURL=style.css.map */
