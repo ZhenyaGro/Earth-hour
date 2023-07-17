@@ -11,18 +11,13 @@
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
-
-  &__lamp-checkbox {
-    position: absolute;
-    left: -99999px;
-    display: none;
-  }
-
-  &__label {
-
-    & svg {
-      height: 50px;
-      fill: #ffe01a
-    }
-  }
 }
+.game__lamp-checkbox {
+  position: absolute;
+  left: -99999px;
+  display: none;
+}
+.game__label svg {
+  height: 50px;
+  fill: #ffe01a;
+}/*# sourceMappingURL=style.css.map */
