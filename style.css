@@ -1,3 +1,27 @@
+.bulb__checkbox {
+  position: absolute;
+  visibility: hidden;
+  left: -99999px;
+}
+
+@keyframes bulb-on_1 {
+  0% {
+    top: 48vh;
+    left: 82vw;
+  }
+}
+@keyframes bulb-on_2 {
+  0% {
+    top: 33vh;
+    left: 75vw;
+  }
+}
+@keyframes bulb-on_3 {
+  0% {
+    top: 63vh;
+    left: 86vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -30,10 +54,23 @@ body {
   content: counter(count);
 }
 
-.bulb__checkbox {
+.bulb {
   position: absolute;
-  left: -99999px;
-  visibility: hidden;
+}
+.bulb_1 {
+  animation-name: bulb-on_1;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+.bulb_2 {
+  animation-name: bulb-on_2;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+.bulb_3 {
+  animation-name: bulb-on_3;
+  animation-duration: 10s;
+  animation-delay: 3s;
 }
 .bulb__checkbox:checked {
   counter-increment: count;
