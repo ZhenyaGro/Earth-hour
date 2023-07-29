@@ -1,0 +1,8 @@
+@for $i from 1 through $countBulb {
+  @keyframes bulb-on_#{$i} {
+    0% {
+      top: random(90) + vh;
+      left: random(90) + vw;
+    }
+  }
+}

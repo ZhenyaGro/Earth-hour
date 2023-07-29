@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  counter-reset: count;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.game {
+  background-image: url(./img/earth-map.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+
+  &__count {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+
+    &::before {
+      content: counter(count);
+    }
+  }
+}
+
+.bulb {
+  position: absolute;
+
+  @for $i from 1 through $countBulb {
+    &_#{$i} {
+      animation-name: bulb-on_#{$i};
+      animation-duration: 10s;
+      animation-delay: #{$i}s;
+    }
+  }
+
+  &__checkbox {
+    @extend %hide;
+  }
+
+  &__checkbox:checked {
+    counter-increment: count;
+  }
+
+  &__label {
+    & svg {
+      height: $bulbWidth;
+      fill: #ffe01a;
+    }
+  }
+}

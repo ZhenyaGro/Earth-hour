@@ -1,0 +1,8 @@
+$bulbWidth: 50px;
+$countBulb: 3;
+
+%hide {
+  position: absolute;
+  visibility: hidden;
+  left: -99999px;
+}
