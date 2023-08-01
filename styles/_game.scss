@@ -8,7 +8,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .game {
@@ -34,14 +36,6 @@ body {
 
 .bulb {
   position: absolute;
-
-  @for $i from 1 through $countBulb {
-    &_#{$i} {
-      animation-name: bulb-on_#{$i};
-      animation-duration: 10s;
-      animation-delay: #{$i}s;
-    }
-  }
 
   &__checkbox {
     @extend %hide;

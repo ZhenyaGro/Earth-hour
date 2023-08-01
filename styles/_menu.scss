@@ -1,0 +1,112 @@
+.start-checkbox {
+  @extend %hide;
+  z-index: 5;
+}
+
+.menu {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+  z-index: 5;
+
+  &__start,
+  &__start *,
+  &__start:after,
+  &__start:before,
+  &__start:after,
+  &__start:before {
+    border: 0 solid;
+    box-sizing: border-box;
+  }
+
+  &__start {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+    transition: background-color .2s;
+  }
+
+  &__start:disabled {
+    cursor: default;
+  }
+
+  &__start:-moz-focusring {
+    outline: auto;
+  }
+
+  &__start svg {
+    display: block;
+    vertical-align: middle;
+  }
+
+  &__start [hidden] {
+    display: none;
+  }
+
+  &__start {
+    border: 2px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__start span {
+    font-weight: 900;
+    mix-blend-mode: difference;
+  }
+
+  &__start:before {
+    background: #fff;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__start:active {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(0.25em);
+  }
+
+  &__start:hover {
+    background-color: #292929;
+  }
+}
+
+#gameStart:checked~.game .bulb {
+  @for $i from 1 through $countBulb {
+    &_#{$i} {
+      animation-name: bulb-on_#{$i};
+      animation-duration: 10s;
+      animation-delay: #{$i+1}s;
+    }
+  }
+}
+
+#gameStart:checked~.menu>.menu__start:before {
+  -webkit-animation: progress-bar 1.2s;
+  animation: progress-bar 1.2s;
+}
+
+#gameStart:checked~.menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2s linear 0.5s, opacity 0.3s linear;
+  transition-delay: 1s;
+}
