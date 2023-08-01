@@ -38,7 +38,7 @@ body {
   @for $i from 1 through $countBulb {
     &_#{$i} {
       animation-name: bulb-on_#{$i};
-      animation-duration: 10s;
+      animation-duration: 15s;
       animation-delay: #{$i}s;
     }
   }
@@ -51,7 +51,13 @@ body {
     counter-increment: count;
   }
 
+  // checked: animation change color + lamp shake then display none
+
   &__label {
+    // @extend %hide;
+    position: absolute;
+    left: -50px;
+
     & svg {
       height: $bulbWidth;
       fill: #ffe01a;
