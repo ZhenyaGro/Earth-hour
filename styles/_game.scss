@@ -49,12 +49,13 @@ body {
 
   &__checkbox:checked {
     counter-increment: count;
+
+    ~.bulb__label {
+      animation: bulb-turn-off 1s linear both;
+    }
   }
 
-  // checked: animation change color + lamp shake then display none
-
   &__label {
-    // @extend %hide;
     position: absolute;
     left: -50px;
 
