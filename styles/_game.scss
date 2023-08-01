@@ -38,7 +38,7 @@ body {
   @for $i from 1 through $countBulb {
     &_#{$i} {
       animation-name: bulb-on_#{$i};
-      animation-duration: 15s;
+      animation-duration: 10s;
       animation-delay: #{$i}s;
     }
   }
