@@ -6,62 +6,62 @@
 
 @keyframes bulb-on_1 {
   0% {
-    top: 18vh;
-    left: calc(66 * 1vw + 50px);
+    top: 2vh;
+    left: calc(68 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_2 {
   0% {
-    top: 33vh;
-    left: calc(58 * 1vw + 50px);
+    top: 69vh;
+    left: calc(11 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_3 {
   0% {
-    top: 79vh;
-    left: calc(16 * 1vw + 50px);
+    top: 15vh;
+    left: calc(88 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_4 {
   0% {
-    top: 5vh;
-    left: calc(86 * 1vw + 50px);
+    top: 62vh;
+    left: calc(31 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_5 {
   0% {
-    top: 58vh;
-    left: calc(61 * 1vw + 50px);
+    top: 59vh;
+    left: calc(81 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_6 {
   0% {
-    top: 41vh;
-    left: calc(59 * 1vw + 50px);
+    top: 43vh;
+    left: calc(45 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_7 {
   0% {
-    top: 13vh;
-    left: calc(53 * 1vw + 50px);
+    top: 3vh;
+    left: calc(17 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_8 {
   0% {
-    top: 16vh;
-    left: calc(56 * 1vw + 50px);
+    top: 89vh;
+    left: calc(34 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_9 {
   0% {
-    top: 20vh;
-    left: calc(73 * 1vw + 50px);
+    top: 48vh;
+    left: calc(5 * 1vw + 50px);
   }
 }
 @keyframes bulb-on_10 {
   0% {
-    top: 64vh;
-    left: calc(55 * 1vw + 50px);
+    top: 34vh;
+    left: calc(64 * 1vw + 50px);
   }
 }
 @keyframes bulb-turn-off {
@@ -189,7 +189,7 @@ body {
 }
 
 .game {
-  background-image: url(../img/earth-map_optimized.jpg);
+  background-image: url(./img/earth-map_optimized.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
